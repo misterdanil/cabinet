@@ -2,6 +2,7 @@ package com.bebracore.cabinet.model;
 
 import java.util.List;
 
+import org.bson.types.Binary;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -18,6 +19,7 @@ public class User {
 	private String oauth2Resource;
 	private boolean isEnabled = false;
 	private List<String> favoriteProducts;
+	private Binary avatar;
 
 	public String getId() {
 		return id;
@@ -97,6 +99,14 @@ public class User {
 
 	public void setFavoriteProducts(List<String> favoriteProducts) {
 		this.favoriteProducts = favoriteProducts;
+	}
+
+	public Binary getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(Binary avatar) {
+		this.avatar = avatar;
 	}
 
 }

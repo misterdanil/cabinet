@@ -14,6 +14,8 @@ public interface UserRepository extends MongoRepository<User, String>, CustomUse
 	User findByoauth2IdAndOauth2Resource(String id, String resource);
 
 	boolean existsByEmail(String email);
+	
+	boolean existsByUsername(String username);
 
 	void removeByoauth2IdAndOauth2Resource(String id, String resource);
 }
